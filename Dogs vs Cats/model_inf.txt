@@ -1,0 +1,20 @@
+Model Name: Dogs vs Cats Classifier
+
+Framework: TensorFlow
+
+Deployment Format: TensorFlow Lite INT8
+
+Input Type: INT8
+
+Classes:
+0 - Cat
+1 - Dog
+
+Training Accuracy: 96.11%
+
+Validation Accuracy: 84.46%
+
+Model Files:
+- dogs_vs_cats.keras
+- dogs_vs_cats_int8.tflite
+- model.h
