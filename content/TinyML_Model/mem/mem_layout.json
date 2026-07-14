@@ -1,0 +1,48 @@
+{
+  "weights.mem": {
+    "format": "hex, 2 digits/line, two's complement INT8, $readmemh-compatible",
+    "total_entries": 48,
+    "layers": [
+      {
+        "name": "hidden",
+        "shape": [
+          8,
+          4
+        ],
+        "start_line": 0,
+        "num_entries": 32
+      },
+      {
+        "name": "output",
+        "shape": [
+          2,
+          8
+        ],
+        "start_line": 32,
+        "num_entries": 16
+      }
+    ]
+  },
+  "bias.mem": {
+    "format": "hex, 8 digits/line, two's complement INT32, $readmemh-compatible",
+    "total_entries": 10,
+    "layers": [
+      {
+        "name": "hidden",
+        "shape": [
+          8
+        ],
+        "start_line": 0,
+        "num_entries": 8
+      },
+      {
+        "name": "output",
+        "shape": [
+          2
+        ],
+        "start_line": 8,
+        "num_entries": 2
+      }
+    ]
+  }
+}

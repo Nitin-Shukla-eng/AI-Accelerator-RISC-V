@@ -1,0 +1,42 @@
+{
+  "stratified": {
+    "tag": "stratified",
+    "test_size": 2367,
+    "accuracy": 0.9983100971694128,
+    "precision": 1.0,
+    "recall": 0.9976539589442815,
+    "f1_score": 0.998825601879037,
+    "roc_auc": 0.9999999999999999,
+    "confusion_matrix": [
+      [
+        662,
+        0
+      ],
+      [
+        4,
+        1701
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n     Healthy       0.99      1.00      1.00       662\n      Faulty       1.00      1.00      1.00      1705\n\n    accuracy                           1.00      2367\n   macro avg       1.00      1.00      1.00      2367\nweighted avg       1.00      1.00      1.00      2367\n"
+  },
+  "cross_load": {
+    "tag": "crossload",
+    "test_size": 3079,
+    "accuracy": 0.9948035076323481,
+    "precision": 1.0,
+    "recall": 0.9924953095684803,
+    "f1_score": 0.9962335216572504,
+    "roc_auc": 0.9999995047062809,
+    "confusion_matrix": [
+      [
+        947,
+        0
+      ],
+      [
+        16,
+        2116
+      ]
+    ],
+    "classification_report": "              precision    recall  f1-score   support\n\n     Healthy       0.98      1.00      0.99       947\n      Faulty       1.00      0.99      1.00      2132\n\n    accuracy                           0.99      3079\n   macro avg       0.99      1.00      0.99      3079\nweighted avg       0.99      0.99      0.99      3079\n"
+  }
+}

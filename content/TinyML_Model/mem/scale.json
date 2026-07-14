@@ -1,0 +1,47 @@
+{
+  "input": {
+    "scale": 0.020526695996522903,
+    "zero_point": -74,
+    "note": "Apply to raw scaled features BEFORE the hidden layer: int8_value = round(float_value / scale) + zero_point"
+  },
+  "hidden_layer": {
+    "weight_scales_per_output_channel": [
+      0.011499104090034962,
+      0.01033875159919262,
+      0.011626740917563438,
+      0.011000821366906166,
+      0.010424543172121048,
+      0.013863339088857174,
+      0.0035217718686908484,
+      0.004993756767362356
+    ],
+    "bias_scales_per_output_channel": [
+      0.0002360386133659631,
+      0.00021222041686996818,
+      0.00023865856928750873,
+      0.0002258105087094009,
+      0.00021398143144324422,
+      0.0002845685521606356,
+      7.229034235933796e-05,
+      0.0001025053279590793
+    ],
+    "activation_scale": 0.033466167747974396,
+    "activation_zero_point": -128,
+    "note": "hidden bias_scale[c] == input_scale * weight_scales_per_output_channel[c] (standard TFLite INT8 convention); ReLU applied post-bias in INT32 accumulator before requantizing to INT8 activation."
+  },
+  "output_layer": {
+    "weight_scales_per_output_channel": [
+      0.04957851395010948,
+      0.04821287840604782
+    ],
+    "bias_scales_per_output_channel": [
+      0.0011981631396338344,
+      0.0011651598615571856
+    ]
+  },
+  "output": {
+    "scale": 0.00390625,
+    "zero_point": -128,
+    "note": "Dequantize final logits: float_value = (int8_value - zero_point) * scale, then argmax/softmax as needed. 0=Healthy, 1=Faulty."
+  }
+}
